@@ -3,14 +3,16 @@
 # dependencies
 /node_modules
 node_modules/*
+\node_modules
 
 
 # testing
 
 
 # production
-
-
+#.env
+.env
+env
 # misc
 .env
 .DS_Store
