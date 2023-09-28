@@ -9,8 +9,9 @@ const FavoriteModel = require("./models/Favorite");
 // Recuerda pasarle la información de tu archivo '.env'.
 
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
+const POSTGRES_URL = process.env.POSTGRES_URL
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/rickandmorty`,
+  POSTGRES_URL+"?sslmode=require",
   { logging: false, native: false }
 );
 
